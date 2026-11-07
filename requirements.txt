@@ -1,0 +1,14 @@
+torch>=2.0
+torchvision
+numpy
+scipy
+pandas
+scikit-learn
+opencv-python
+Pillow
+pycocotools
+transformers
+pyyaml
+# optional mature trackers for the CFC26 evaluation
+# pip install git+https://github.com/ifzhang/ByteTrack.git   (provides yolox)
+# pip install trackers                                       (provides trackers.ocsort_tracker)

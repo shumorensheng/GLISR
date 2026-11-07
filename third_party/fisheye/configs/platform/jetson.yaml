@@ -1,0 +1,22 @@
+dataset:
+  batch_size: 4
+  workers: 0  # For dataloader
+  use_multithreading: false
+  max_workers: 2  # For multithreading
+  use_blur: true
+  start_frame: 0  # 0-indexed - valid only when input is a single file (not a directory)
+  end_frame: 0   # 0-indexed - set to 0 to process all frames. Only applies to single file (not a directory)
+
+model:
+  type: yolov5
+  weights: weights/cfc_detect_yolov5s_v1.pt
+  device: cuda:0
+
+inference:
+  use_multithreading: false
+  max_workers: 2  # For multithreading
+  apply_nms_batchwise: true
+  apply_length_estimates_batchwise: false
+  length_config:
+    type: unet
+    weights: null
